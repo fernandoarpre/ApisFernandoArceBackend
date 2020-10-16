@@ -20,3 +20,7 @@ Descargar Codigo y Ejecutar en Visual Studio (Preferencia 2017 o 2019)
      "SmtpUser": "pruebatecnicaapisfernando@gmail.com", // Correo Creado para la Prueba
      "SmtpPass": "5Ur93P4s4r3" // Contraseña de Correo
     }
+
+### Postman Collection
+    PruebaTecnica.postman_collection.json
+    Descargar la colección e importarla en postman, para hacer las pruebas de la Api
