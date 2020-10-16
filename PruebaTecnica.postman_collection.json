@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "42c562fa-8457-4b41-8789-baabba2b1003",
+		"name": "PruebaTecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Autenticar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"fernando.arpre@gmail.com\",\r\n    \"Password\":\"arce123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:52066/api/Login/Autenticar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Login",
+								"Autenticar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "SaveCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYmYiOjE2MDI2NDcxNzAsImV4cCI6MTYwMjY0ODA3MCwiaWF0IjoxNjAyNjQ3MTcwfQ.YH6nLmSClUFxnelsl2gURy9IaCehKKp1fpDWOaYykN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCustomer\": null,\r\n    \"DocumentId\":\"1152449002\",\r\n    \"FirstName\":\"Juan Alexis\",\r\n    \"LastName\": \"Arce\",\r\n    \"Address\" : \"Cll 65gg 90-27\",\r\n    \"City\" : \" Acandi\",\r\n    \"Cellphone\" : \"3225496224\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:52066/api/Customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYmYiOjE2MDI3OTMzMzgsImV4cCI6MTYwMjc5NDIzOCwiaWF0IjoxNjAyNzkzMzM4fQ.Z-tyJNzvIKTLe6XvbYERmdSE4pSWzF6lBLc1cPoFB38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:52066/api/Customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYmYiOjE2MDI2NDY0NTAsImV4cCI6MTYwMjY0NzM1MCwiaWF0IjoxNjAyNjQ2NDUwfQ.qiL1zEAS_B6o_OJfYXSu81BTz4xTmS1Jn0FmMc-Me2w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCustomer\": 6,\r\n    \"DocumentId\":\"\",\r\n    \"FirstName\":\"\",\r\n    \"LastName\": \"\",\r\n    \"Address\" : \"\",\r\n    \"City\" : \" \",\r\n    \"Cellphone\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:52066/api/Customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "GetSales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiIxNSIsIm5iZiI6MTYwMjg2MjU3NCwiZXhwIjoxNjAyODYzNDc0LCJpYXQiOjE2MDI4NjI1NzR9.2GT3Fy2k7unJeAP-5gxeCPUY-SmdbAkhB-u0iS_QmA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:52066/api/Sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveSales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiIxNSIsIm5iZiI6MTYwMjg2MjU3NCwiZXhwIjoxNjAyODYzNDc0LCJpYXQiOjE2MDI4NjI1NzR9.2GT3Fy2k7unJeAP-5gxeCPUY-SmdbAkhB-u0iS_QmA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idSale\": null, //Cambiar por el Id para editar\r\n    \"Period\": \"201903\",\r\n    \"Quantity\": 30,\r\n    \"Value\": 4000,\r\n    \"idCustomer\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:52066/api/Sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiIxNSIsIm5iZiI6MTYwMjg2MjU3NCwiZXhwIjoxNjAyODYzNDc0LCJpYXQiOjE2MDI4NjI1NzR9.2GT3Fy2k7unJeAP-5gxeCPUY-SmdbAkhB-u0iS_QmA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:52066/api/Sales/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Sales",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYmYiOjE2MDI4NDE3NDgsImV4cCI6MTYwMjg0MjY0OCwiaWF0IjoxNjAyODQxNzQ4fQ.QZzX7aJkdgXpKe4HBlPSQeIC0iGSGbT6e99CsdjgzYA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:52066/api/Users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYmYiOjE2MDI4NDE3NDgsImV4cCI6MTYwMjg0MjY0OCwiaWF0IjoxNjAyODQxNzQ4fQ.QZzX7aJkdgXpKe4HBlPSQeIC0iGSGbT6e99CsdjgzYA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUser\": null,\r\n    \"email\": \"fernando@gmail.com\",\r\n    \"password\": \"arce123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:52066/api/Users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYmYiOjE2MDI4NDE3NDgsImV4cCI6MTYwMjg0MjY0OCwiaWF0IjoxNjAyODQxNzQ4fQ.QZzX7aJkdgXpKe4HBlPSQeIC0iGSGbT6e99CsdjgzYA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:52066/api/Users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "GetDashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiIxNSIsIm5iZiI6MTYwMjg2MDcwNywiZXhwIjoxNjAyODYxNjA3LCJpYXQiOjE2MDI4NjA3MDd9.pWWvWTW2MsNppeGfj_y7Mi6K_SQynjbV7tT7KTOXsDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:52066/api/Home/GetDashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Home",
+								"GetDashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCharts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiIxNSIsIm5iZiI6MTYwMjg2MjU3NCwiZXhwIjoxNjAyODYzNDc0LCJpYXQiOjE2MDI4NjI1NzR9.2GT3Fy2k7unJeAP-5gxeCPUY-SmdbAkhB-u0iS_QmA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:52066/api/Home/GetCharts/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "52066",
+							"path": [
+								"api",
+								"Home",
+								"GetCharts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
